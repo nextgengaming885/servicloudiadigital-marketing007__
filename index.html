@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiCloudia - Digital Marketing Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <a href="https://wa.me/8891651581" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+</head>
+<body>
+
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/logo.png" alt="ServiCloudia Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-moon" id="icon"></i>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    
+    <div class="text-box">
+        <h1>Transforming Your Vision into Digital Reality</h1>
+        <p>At ServiCloudia, we specialize in high-impact digital marketing strategies designed to scale your business.</p>
+        <a href="#services" class="hero-btn">Explore Digital World</a>
+    </div>      
+</section>
+
+<section class="services" id="services">
+    <h1>Our Services</h1>
+    <p>Comprehensive solutions to grow your brand online.</p>
+    <div class="row">
+        <div class="course-col">
+            <h3>Social Media Marketing</h3>
+            <p>Targeted campaigns to boost engagement and brand awareness across all social platforms.</p>
+        </div>
+        <div class="course-col">
+            <h3>SEO Optimization</h3>
+            <p>Improve your search engine rankings and drive organic traffic to your website.</p>
+        </div>
+        <div class="course-col">
+            <h3>Content Creation</h3>
+            <p>Compelling visuals and copy designed to resonate with your specific audience.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about-us" id="about">
+    <div class="row">
+        <div class="about-col">
+            <h1>We Are ServiCloudia</h1>
+            <p>We provide the creative edge and technical expertise needed to stand out in today’s competitive digital landscape. Our team is dedicated to your growth.</p>
+            <section class="about-us" id="about">
+    <div class="row">
+        <div class="about-col">
+            <h1>We Are ServiCloudia</h1>
+            <h3>Founder & CEO: Mohammed Jaisal KV</h3> 
+            <p>We provide the creative edge and technical expertise needed to stand out in today’s competitive digital landscape. Our team is dedicated to your growth.</p>
+            <a href="#contact" class="hero-btn red-btn">WORK WITH US</a>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</section>
+<section class="portfolio" id="portfolio">
+    <h1>Our Projects</h1>
+    <p>We deliver results that speak for themselves.</p>
+    <div class="row">
+        <div class="portfolio-col">
+            <img src="images/project1.jpg">
+            <div class="layer">
+                <h3>BRANDING</h3>
+            </div>
+        </div>
+        <div class="portfolio-col">
+            <img src="images/project2.jpg">
+            <div class="layer">
+                <h3>WEB DESIGN</h3>
+            </div>
+        </div>
+        <div class="portfolio-col">
+            <img src="images/project3.jpg">
+            <div class="layer">
+                <h3>AD CAMPAIGNS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <h1>Our Pricing</h1>
+    <div class="row">
+        <div class="price-col">
+            <h3>Basic</h3>
+            <h2>$199 /mo</h2>
+            <ul>
+                <li>Social Media Management</li>
+                <li>5 Creative Posts</li>
+                <li>Basic SEO</li>
+            </ul>
+            <a href="#contact" class="hero-btn red-btn">Choose Plan</a>
+        </div>
+        <div class="price-col featured">
+            <h3>Pro</h3>
+            <h2>$499 /mo</h2>
+            <ul>
+                <li>Full Digital Marketing</li>
+                <li>15 Creative Posts</li>
+                <li>Advanced SEO & Ads</li>
+            </ul>
+            <a href="#contact" class="hero-btn">Choose Plan</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-box">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit" class="hero-btn red-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+<section class="footer">
+    <h4>Connect With Us</h4>
+    <p>Follow us on social media for more updates and digital marketing tips.</p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    <p>© 2026 ServiCloudia. Managed by <b>Mohammed Jaisal KV</b></p>
+    <p>Made with <i class="far fa-heart"></i> by ServiCloudia</p>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script> 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+    var icon = document.getElementById("icon");
+icon.onclick = function() {
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+}
+</script>
+</body>
+</html>
