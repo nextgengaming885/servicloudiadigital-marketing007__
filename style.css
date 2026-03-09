@@ -2,13 +2,18 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpg);
+    /* Overlay-യും ഇമേജും കൃത്യമായി വരാൻ */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('images/background.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: cover; /* ഇമേജ് ഫുൾ ആയി വരാൻ ഇത് നിർബന്ധമാണ് */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* സ്ക്രോൾ ചെയ്യുമ്പോൾ ഇമേജ് മാറാതെ നിൽക്കാൻ */
     position: relative;  
 }
 nav{
@@ -31,15 +36,15 @@ nav img{
     position: relative;
 }
 .nav-links ul li a{
-   color: #fff;
+    color: #fff;
     text-decoration: none;
-    font-size: 13px
+    font-size: 15px;
 }
 .nav-links ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background: #cc25da;
+    background: #87CEEB;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -61,8 +66,7 @@ nav img{
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 14ox;
-    color: #fff;
+    font-size: 16px;
 }
 .hero-btn{
     display: inline-block;
@@ -76,25 +80,83 @@ nav img{
     cursor: pointer;
 }
 .hero-btn:hover{
-    border: 1px solid #f0edef;
-    background: #f318c5;
+    border: 1px solid #87CEEB;
+    background: #87CEEB;
     transition: 1s;
 }
 
+/* Services Section */
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/* About Section */
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.red-btn{
+    border: 1px solid #87CEEB;
+    background: transparent;
+    color: #87CEEB;
+}
+.red-btn:hover{
+    color: #fff;
+}
+
+/* Footer Section */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.icons .fab, .icons .far{
+    color: #87CEEB;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* Responsive */
 nav .fa{
     display: none;
 }
-
 @media(max-width: 700px){
     .text-box h1{
-        font-size: 20px;
+        font-size: 24px;
     }
-    .nav-links ul li{
-        display: block;
+    .row{
+        flex-direction: column;
     }
     .nav-links{
         position: absolute;
-        background: #dd73c5;
+        background: #04091e;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -111,29 +173,174 @@ nav .fa{
         cursor: pointer;
     }
     .nav-links ul li{
-        padding: 30px;
+        display: block;
+        padding: 25px;
     }
+}/* Portfolio */
+.portfolio{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.portfolio-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(135, 206, 235, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
 
+/* Pricing */
+.pricing{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+/* Pricing Section - രണ്ട് കാർഡുകളും ഒരേ കളർ ആക്കാൻ */
+.price-col {
+    flex-basis: 45%;
+    background: #04091e; /* Pro സെക്ഷന്റെ അതേ ഡാർക്ക് കളർ */
+    border-radius: 10px;
+    padding: 40px 20px;
+    transition: 0.5s;
+    color: #fff; /* ഉള്ളിലെ അക്ഷരങ്ങൾ വെളുത്ത നിറമാക്കാൻ */
+}
 
+/* ഡാർക്ക് മോഡിൽ അക്ഷരങ്ങൾ വ്യക്തമാകാൻ */
+.price-col h3, .price-col h2, .price-col ul li {
+    color: #fff;
+}
 
+.price-col ul {
+    list-style: none;
+    margin: 20px 0;
+}
 
+.price-col ul li {
+    padding: 10px 0;
+}
 
+/* ഹോവർ ചെയ്യുമ്പോൾ ചെറിയൊരു മാറ്റം വരാൻ */
+.price-col:hover {
+    box-shadow: 0 0 20px 0px rgba(135, 206, 235, 0.2);
 
+}
 
+/* Contact Form */
+.contact-section{
+    width: 80%;
+    margin: 50px auto;
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+}
+.contact-box input, .contact-box textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* ബട്ടണുകൾക്ക് കുറച്ചുകൂടി ഭംഗിയുള്ള ആനിമേഷൻ */
+.hero-btn {
+    transition: all 0.4s ease-in-out;
+}
 
+.hero-btn:hover {
+    transform: translateY(-5px); /* മുകളിലേക്ക് അല്പം ഉയരാൻ */
+    box-shadow: 0 10px 20px rgba(135, 206, 235, 0.4);
+}
 
+/* സർവീസ് കാർഡുകൾ സ്ക്രോൾ ചെയ്യുമ്പോൾ തെളിയാൻ */
+.course-col {
+    transition: transform 0.5s;
+}
 
+.course-col:hover {
+    transform: scale(1.05); /* മൗസ് വയ്ക്കുമ്പോൾ അല്പം വലുതാകാൻ */
+}
 
+.text-box h1 {
+    animation: fadeInDown 1.5s ease;
+}
 
+.text-box p {
+    animation: fadeInUp 2s ease;
+}
 
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 
-
-
-
-
-
-
-
-
-
-
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}#icon {
+    width: 30px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 20px;
+}
+.dark-theme {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    background-color: #121212;
+    color: #fff;
+}
+.dark-theme .course-col, .dark-theme .contact-section {
+    background: #1e1e1e;
+    color: #fff;
+}
